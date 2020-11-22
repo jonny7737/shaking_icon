@@ -1,6 +1,6 @@
 # Shaking Icon Flutter widget
 
-##Add a shaking icon to your Flutter app.
+##  Add a shaking icon to your Flutter app.
 
    Icon to shake - This can be either an IconData object or a String assetName for an AssetImage.
   ```
