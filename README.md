@@ -4,7 +4,8 @@ Add a shaking icon to your Flutter app.
 
    Icon to shake - This can be either an IconData object or a String assetName for an AssetImage.
   ```
-  final dynamic icon;```
+  final dynamic icon;
+```
 
   Size parameter passed to Icon constructor
   ```
