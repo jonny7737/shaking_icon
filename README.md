@@ -1,6 +1,6 @@
-# shaking_icon
+# Shaking Icon Flutter widget
 
-Add a shaking icon to your app.
+Add a shaking icon to your Flutter app.
 
 ## Getting Started
 
