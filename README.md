@@ -47,10 +47,11 @@ final int secondsToRepeat;
   Example usages:
   ``` dart
 ShakingIcon(Icons.verified_user, size: 32, 
-  shakeIt: (bool shake) {
+    shakeIt: (bool shake) {
               if(shake) return true;
               else return false;
-  }),
-ShakingIcon('assets/003-pointer.png', color: Colors.black, horizontalShake: false, shake: false),
+    },
+)
+ShakingIcon('assets/003-pointer.png', color: Colors.black, horizontalShake: false, shake: false)
   
   ```
