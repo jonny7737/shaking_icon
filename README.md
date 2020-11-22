@@ -46,7 +46,11 @@ Add a shaking icon to your Flutter app.
 
   Example usages:
   ``` dart
-  ShakingIcon(Icons.verified_user, size: 32, shakeIt: (bool shake){if(shake) return true;}),
+  ShakingIcon(Icons.verified_user, size: 32, 
+    shakeIt: (bool shake) {
+                if(shake) return true;
+                else return false;
+  }),
   ShakingIcon('assets/003-pointer.png', color: Colors.black, horizontalShake: false, shake: false),
   
   ```
