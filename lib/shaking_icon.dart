@@ -3,7 +3,6 @@ library shaking_icon;
 import 'dart:async';
 import 'dart:math';
 
-import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
 import 'package:vector_math/vector_math_64.dart';
 
@@ -131,7 +130,6 @@ class _ShakingIconState extends State<ShakingIcon> with SingleTickerProviderStat
     /// Random delay between 0.5 and 5 seconds.
     Future.delayed(Duration(milliseconds: nextRndInt(min: 1, max: 10) * 500)).then((_) {
       if (!mounted) return;
-      if (ExpandableController.of(context).expanded) return;
       animationController.reset();
       animationController.forward();
     });
