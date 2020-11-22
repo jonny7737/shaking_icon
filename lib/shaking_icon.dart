@@ -35,20 +35,10 @@ class ShakingIcon extends StatefulWidget {
   /// Frequency to repeat the shake in seconds
   final int secondsToRepeat;
 
-  /// [ShakingTitleIcon(this.icon, {@required this.size, this.color, this.horizontalShake})]
-  ///
-  ///     1. [icon]: IconData (Icons.) for icon to shake.
-  ///
-  ///     2. [horizontalShake]: Shake horizontally if true.
-  ///
-  ///     3. [verticalShake]: Shake vertically if true.
-  ///
-  ///     Diagonal shack if horizontal and vertical are both true.
-  ///
-  ///
-  /// Example:
+  /// Example usages:
   /// ```dart
-  ///     ShakingTitleIcon(Icons.verified_user, size: 32, horizontalShake: false),
+  ///     ShakingIcon(Icons.verified_user, size: 32, shakeIt: (bool shake){if(shake) return true;}),
+  ///     ShakingIcon('assets/003-pointer.png', color: Colors.black, horizontalShake: false, shake: false),
   ///
   /// ```
   ///

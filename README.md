@@ -2,13 +2,38 @@
 
 Add a shaking icon to your Flutter app.
 
-## Getting Started
+  ///
+  /// Icon to shake - This can be either an IconData object
+  /// or a String assetName for an AssetImage.
+  final dynamic icon;
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+  /// Size parameter passed to Icon constructor
+  final double size;
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+  /// Function to determine shake flag from outside this class
+  /// This function takes precedence over shake flag
+  final Function shakeIt;
+
+  /// Enable / Disable shake flag to support dynamic UI
+  /// Default is true
+  final bool shake;
+
+  /// Color parameter passed to Icon constructor
+  final Color color;
+
+  /// Horizontal shake.  Default to Horizontal shake
+  final bool horizontalShake;
+
+  /// Vertical shake.  Default to Horizontal shake
+  final bool verticalShake;
+
+  /// Frequency to repeat the shake in seconds
+  final int secondsToRepeat;
+
+  /// Example usages:
+  /// ```dart
+  ///     ShakingIcon(Icons.verified_user, size: 32, shakeIt: (bool shake){if(shake) return true;}),
+  ///     ShakingIcon('assets/003-pointer.png', color: Colors.black, horizontalShake: false, shake: false),
+  ///
+  /// ```
+  ///
