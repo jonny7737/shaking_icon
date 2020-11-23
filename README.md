@@ -10,7 +10,7 @@ Size parameter passed to Icon constructor
 ```
 final double size;
 ```
-Function to determine shake flag from outside this class
+Function to determine shake flag from outside this class<br/>
 This function takes precedence over shake flag
 ```
 final Function shakeIt;
@@ -28,7 +28,7 @@ Horizontal shake.  Default to Horizontal shake
 ```
 final bool horizontalShake;
 ```
-Diagonal shake if horizontalShake && verticalShake = true
+Diagonal shake if horizontalShake && verticalShake = true<br/>
 Vertical shake.  Default to Horizontal shake
 ```
 final bool verticalShake;
