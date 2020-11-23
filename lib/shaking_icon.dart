@@ -132,9 +132,9 @@ class _ShakingIconState extends State<ShakingIcon> with SingleTickerProviderStat
   Vector3 _shake() {
     /// 10.0 is the number of oscillations (how many wiggles)
     ///  8.0 is how wide is your wiggle
-    double offset = sin(animationController.value * pi * 10.0) * 8;
-    double xOffset = widget.horizontalShake ? offset : 0.0;
-    double yOffset = widget.verticalShake ? offset : 0.0;
+    final double offset = sin(animationController.value * pi * 10.0) * 8;
+    final double xOffset = widget.horizontalShake ? offset : 0.0;
+    final double yOffset = widget.verticalShake ? offset : 0.0;
     return Vector3(xOffset, yOffset, 0.0);
   }
 }
