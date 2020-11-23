@@ -37,9 +37,13 @@ class ShakingIcon extends StatefulWidget {
 
   /// Example usages:
   /// ```dart
-  ///     ShakingIcon(Icons.verified_user, size: 32, shakeIt: (bool shake){if(shake) return true;}),
-  ///     ShakingIcon('assets/003-pointer.png', color: Colors.black, horizontalShake: false, shake: false),
-  ///
+  ///     ShakingIcon(Icons.verified_user, size: 32,
+  ///                 shakeIt: (bool shake){
+  ///                   if(shake) return true;
+  ///                   return false;
+  ///                 }),
+  ///     ShakingIcon('assets/003-pointer.png', color: Colors.black,
+  ///                 horizontalShake: false, shake: false),
   /// ```
   ///
   ShakingIcon(
@@ -66,17 +70,9 @@ class _ShakingIconState extends State<ShakingIcon> with SingleTickerProviderStat
   @override
   Widget build(BuildContext context) {
     if (widget.icon.runtimeType == IconData)
-      child = Icon(
-        widget.icon,
-        size: widget.size,
-        color: widget.color,
-      );
+      child = Icon(widget.icon, size: widget.size, color: widget.color);
     else if (widget.icon.runtimeType == String) {
-      child = ImageIcon(
-        AssetImage(widget.icon),
-        size: widget.size,
-        color: widget.color,
-      );
+      child = ImageIcon(AssetImage(widget.icon), size: widget.size, color: widget.color);
     }
 
     return AnimatedBuilder(
@@ -94,9 +90,8 @@ class _ShakingIconState extends State<ShakingIcon> with SingleTickerProviderStat
   @override
   void initState() {
     super.initState();
-
     animationController = AnimationController(vsync: this, duration: Duration(seconds: 3));
-    likeAPolaroidCamera();
+    if (shakeIt()) likeAPolaroidCamera();
   }
 
   int nextRndInt({int min = 0, @required int max}) => min + rng.nextInt(max - min);
