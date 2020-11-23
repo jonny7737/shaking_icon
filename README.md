@@ -28,6 +28,7 @@ final Color color;
 ```
 final bool horizontalShake;
 ```
+Diagonal shake if horizontalShake && verticalShake = true
   Vertical shake.  Default to Horizontal shake
 ```
 final bool verticalShake;
