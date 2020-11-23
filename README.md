@@ -6,38 +6,38 @@ Icon to shake - This can be either an IconData object or a String assetName for 
 ```
 final dynamic icon;
 ```
-  Size parameter passed to Icon constructor
+Size parameter passed to Icon constructor
 ```
 final double size;
 ```
-  Function to determine shake flag from outside this class
-  This function takes precedence over shake flag
+Function to determine shake flag from outside this class
+This function takes precedence over shake flag
 ```
 final Function shakeIt;
 ```
-  Enable / Disable shake flag to support dynamic UI
-  Default value is true
+Enable / Disable shake flag to support dynamic UI
+Default value is true
 ```
 final bool shake;
 ```
-  Color parameter passed to Icon constructor
+Color parameter passed to Icon constructor
 ```
 final Color color;
 ```
-  Horizontal shake.  Default to Horizontal shake
+Horizontal shake.  Default to Horizontal shake
 ```
 final bool horizontalShake;
 ```
 Diagonal shake if horizontalShake && verticalShake = true
-  Vertical shake.  Default to Horizontal shake
+Vertical shake.  Default to Horizontal shake
 ```
 final bool verticalShake;
 ```
-  Frequency to repeat the shake in seconds
+Frequency to repeat the shake in seconds
 ```
 final int secondsToRepeat;
 ```
-  Example usages:
+Example usages:
 ``` dart
 ShakingIcon(Icons.verified_user, size: 32, 
     shakeIt: (bool shake) {
