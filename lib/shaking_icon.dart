@@ -73,9 +73,10 @@ class _ShakingIconState extends State<ShakingIcon> with SingleTickerProviderStat
   Widget build(BuildContext context) {
     if (widget.icon.runtimeType == IconData)
       child = Icon(widget.icon, size: widget.size, color: widget.color);
-    else if (widget.icon.runtimeType == String) {
+    else if (widget.icon.runtimeType == String)
       child = ImageIcon(AssetImage(widget.icon), size: widget.size, color: widget.color);
-    }
+    else // If widget.icon is not the right type, show a warning icon.
+      child = Icon(Icons.warning_sharp, size: widget.size, color: widget.color);
 
     return AnimatedBuilder(
       animation: animationController,
@@ -96,6 +97,7 @@ class _ShakingIconState extends State<ShakingIcon> with SingleTickerProviderStat
     if (shakeIt()) likeAPolaroidCamera();
   }
 
+  /// Return a random integer number between min and max inclusive
   int nextRndInt({int min = 0, @required int max}) => min + rng.nextInt(max - min);
 
   bool shakeIt() {
