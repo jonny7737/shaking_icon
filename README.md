@@ -2,11 +2,13 @@
 
 ##  Add a shaking icon to your Flutter app.
 
-Icon to shake - This can be either an IconData object or a String assetName for an AssetImage.
+Icon to shake - This can be either an IconData object <br/>
+or a String assetName for an AssetImage.
 ```
 final dynamic icon;
 ```
-Size parameter passed to Icon constructor
+Size parameter passed to Icon constructor<br/>
+Default is 36
 ```
 final double size;
 ```
@@ -15,7 +17,7 @@ This function takes precedence over shake flag
 ```
 final Function shakeIt;
 ```
-Enable / Disable shake flag to support dynamic UI
+Enable / Disable shake flag to support dynamic UI.<br/>
 Default value is true
 ```
 final bool shake;
@@ -24,12 +26,14 @@ Color parameter passed to Icon constructor
 ```
 final Color color;
 ```
-Horizontal shake.  Default to Horizontal shake
+Horizontal shake.<br/>
+Default to Horizontal shake
 ```
 final bool horizontalShake;
 ```
 Diagonal shake if horizontalShake && verticalShake = true<br/>
-Vertical shake.  Default to Horizontal shake
+Vertical shake.<br/>
+Default to Horizontal shake
 ```
 final bool verticalShake;
 ```
@@ -45,6 +49,7 @@ ShakingIcon(Icons.verified_user, size: 32,
               else return false;
     },
 )
+
 ShakingIcon('assets/003-pointer.png', color: Colors.black, horizontalShake: false, shake: false)
   
 ```
