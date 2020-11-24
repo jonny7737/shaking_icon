@@ -115,8 +115,9 @@ class _ShakingIconState extends State<ShakingIcon> with SingleTickerProviderStat
     }
   }
 
+  /// Random delay between 0.5 and 5 seconds in 1/2 second increments.<br/>
+  /// Then run the animation if this object is still alive.
   void waitForIt() {
-    /// Random delay between 0.5 and 5 seconds.
     Future.delayed(Duration(milliseconds: nextRndInt(min: 1, max: 10) * 500)).then((_) {
       if (!mounted) return;
       animationController.reset();
